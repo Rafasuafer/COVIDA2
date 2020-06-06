@@ -1,0 +1,35 @@
+﻿@using Dominio;
+@{
+	ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>PRODUCTOS</title>
+</head>
+<body>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (Producto producto in ViewBag.productos)
+			{
+				<tr>
+					<th scope="row">@producto.Id</th>
+					<td>@producto.Nombre</td>
+					<td>@producto.Precio</td>
+				</tr>
+
+			}
+		</tbody>
+	</table>
+</body>
+</html>
