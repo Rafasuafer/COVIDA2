@@ -52,7 +52,9 @@ namespace Dominio
 
 		public virtual bool validarDonacion(){
 			bool esValida = false;
-			if()
+			if(valor > 0){
+				esValida = true;
+			}
 			return esValida;
 		}
 

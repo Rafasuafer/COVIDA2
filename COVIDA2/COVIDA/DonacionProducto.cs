@@ -39,7 +39,23 @@ namespace Dominio
 			base.Fecha = DateTime.Now;
 			this.productos = productos;
         }
-        
-        #endregion
-    }
+
+		// # TODO #
+		public override bool validarDonacion()
+		{
+			bool esValida = true;
+			int i = 0;
+			while (i < 0 && esValida)
+			{
+				if (!productos[i].esValido())
+				{
+					esValida = false;		
+				}
+				i++;
+			}
+			return esValida;
+		}
+
+		#endregion
+	}
 }
